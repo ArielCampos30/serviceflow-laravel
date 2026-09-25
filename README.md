@@ -60,12 +60,30 @@ Este proyecto busca demostrar competencias aplicables a trabajos freelance de:
 - gestión de clientes y órdenes
 - arquitectura MVC
 
+## API REST demostrativa
+
+La API utiliza un token Bearer configurado por entorno mediante `SERVICEFLOW_API_TOKEN`.
+
+Endpoints principales:
+
+- `GET /api/v1/clients`
+- `GET /api/v1/services`
+- `GET /api/v1/orders`
+- `GET /api/v1/orders/{id}`
+- `POST /api/v1/orders`
+- `PUT /api/v1/orders/{id}`
+
+Ejemplo de cabecera:
+
+```http
+Authorization: Bearer <SERVICEFLOW_API_TOKEN>
+```
+
 ## Próximos bloques previstos
 
-- API REST con autenticación (siguiente bloque).
 - Historial de cambios de órdenes.
 - Exportación CSV.
-- Deploy público de demostración.
+- Demo pública desplegable mediante Docker/Render.
 
 ## Licencia
 
