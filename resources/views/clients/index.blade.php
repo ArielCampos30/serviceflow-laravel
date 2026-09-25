@@ -1,7 +1,11 @@
 @extends('layouts.app')
 @section('title','Clientes | ServiceFlow')
 @section('page-title','Clientes')
-@section('top-actions')@if(auth()->user()->isAdmin())<a class="button primary" href="{{ route('clients.create') }}">+ Nuevo cliente</a>@endif@endsection
+@section('top-actions')
+@if(auth()->user()->isAdmin())
+<a class="button primary" href="{{ route('clients.create') }}">+ Nuevo cliente</a>
+@endif
+@endsection
 @section('content')
 <section class="panel">
 <form class="filters" method="GET"><input name="q" value="{{ request('q') }}" placeholder="Buscar por nombre, empresa o email"><button class="button" type="submit">Buscar</button><a class="button ghost" href="{{ route('clients.index') }}">Limpiar</a></form>
