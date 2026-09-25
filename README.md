@@ -45,7 +45,7 @@ Abrir `http://127.0.0.1:8000`.
 
 ### Usuarios demo
 
-Los seeders crean los usuarios `admin@serviceflow.test` y `operador@serviceflow.test`. La contraseña se toma de `DEMO_ADMIN_PASSWORD` y no se guarda en el repositorio.
+Los seeders crean los usuarios `admin@serviceflow.test` y `operador@serviceflow.test`. En la demo pública se usa la contraseña `ServiceFlowDemo!26`; en otros entornos puede reemplazarse mediante `DEMO_ADMIN_PASSWORD`.
 
 ## Alcance de portfolio
 
@@ -83,7 +83,7 @@ Authorization: Bearer <SERVICEFLOW_API_TOKEN>
 
 - Historial de cambios de órdenes.
 - Exportación CSV.
-- Demo pública desplegable mediante Docker/Render.
+- Demo pública desplegada mediante Docker/Render.
 
 ## Licencia
 

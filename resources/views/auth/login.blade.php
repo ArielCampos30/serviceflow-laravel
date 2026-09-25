@@ -11,6 +11,6 @@
         <label class="checkbox"><input type="checkbox" name="remember"> Recordarme</label>
         <button class="button primary" type="submit">Ingresar</button>
     </form>
-    <div class="demo-note"><strong>Demo</strong><span>Usá las credenciales configuradas para el entorno de demostración.</span></div>
+    <div class="demo-note"><strong>Demo pública</strong><span>admin@serviceflow.test · contraseña: ServiceFlowDemo!26</span></div>
 </div>
 @endsection
