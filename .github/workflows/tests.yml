@@ -32,3 +32,13 @@ jobs:
 
       - name: Run tests
         run: php artisan test
+
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build demo image
+        run: docker build -t serviceflow-demo .
