@@ -4,6 +4,14 @@ ServiceFlow es un **proyecto demostrativo de portfolio** para empresas de servic
 
 > No fue desarrollado para un cliente. Se creó como demostración técnica para portfolio freelance.
 
+## Demo pública
+
+- URL: https://serviceflow-laravel-demo.onrender.com
+- Usuario: `admin@serviceflow.test`
+- Contraseña: `ServiceFlowDemo!26`
+
+La demo usa datos ficticios y puede reiniciarse cuando el servicio vuelve a desplegarse.
+
 ## Funcionalidades
 
 - Autenticación con sesión.
