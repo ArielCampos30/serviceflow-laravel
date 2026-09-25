@@ -1,34 +1,72 @@
-# ServiceFlow Laravel
+# ServiceFlow — Laravel 13
 
-Proyecto demostrativo desarrollado para portfolio con PHP y Laravel. Simula un sistema de gestión para una empresa de servicios, con autenticación, roles, clientes, servicios, órdenes de trabajo, prioridades, estados, filtros y dashboard.
+ServiceFlow es un **proyecto demostrativo de portfolio** para empresas de servicios. Simula un sistema interno donde un equipo puede administrar clientes, servicios y órdenes de trabajo desde un panel responsive.
+
+> No fue desarrollado para un cliente. Se creó como demostración técnica para portfolio freelance.
+
+## Funcionalidades
+
+- Autenticación con sesión.
+- Roles `Administrador` y `Operador`.
+- Dashboard con métricas operativas.
+- Gestión de clientes con búsqueda y estados.
+- Catálogo de servicios.
+- Órdenes de trabajo con prioridad, estado, responsable, fecha y total.
+- Filtros por estado, prioridad y texto.
+- Permisos: sólo administradores gestionan clientes y servicios; ambos roles gestionan órdenes.
+- Validaciones del lado servidor y protección CSRF de Laravel.
+- Seeders con datos demostrativos.
+- Diseño responsive sin depender de un framework CSS externo.
+- Tests de autenticación, permisos y creación de órdenes.
 
 ## Stack
 
 - PHP 8.3+
 - Laravel 13
-- MySQL / SQLite para desarrollo y pruebas
+- Eloquent ORM
 - Blade
-- JavaScript
-- HTML / CSS
-- REST-ready architecture
+- SQLite para demo / compatible con MySQL y PostgreSQL
+- HTML + CSS + JavaScript
+- PHPUnit
 
-## Funcionalidades
+## Instalación local
 
-- Login y autenticación
-- Roles Administrador / Operador
-- Gestión de clientes
-- Gestión de servicios
-- Órdenes de trabajo
-- Estados y prioridades
-- Búsqueda y filtros
-- Dashboard con métricas
-- Validaciones de formularios
-- Seeders con datos de demostración
-- Diseño responsive
-- Tests de autenticación, autorización y órdenes
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+# Definí DEMO_ADMIN_PASSWORD en .env antes del seed
+php artisan migrate --seed
+php artisan serve
+```
 
-## Objetivo
+Abrir `http://127.0.0.1:8000`.
 
-Este repositorio fue creado como proyecto demostrativo de portfolio para mostrar una implementación Laravel orientada a sistemas administrativos y de gestión.
+### Usuarios demo
 
-No corresponde a un desarrollo realizado para un cliente.
+Los seeders crean los usuarios `admin@serviceflow.test` y `operador@serviceflow.test`. La contraseña se toma de `DEMO_ADMIN_PASSWORD` y no se guarda en el repositorio.
+
+## Alcance de portfolio
+
+Este proyecto busca demostrar competencias aplicables a trabajos freelance de:
+
+- PHP / Laravel
+- CRUD y paneles administrativos
+- MySQL / PostgreSQL
+- autenticación y roles
+- sistemas internos para empresas
+- formularios y validaciones
+- gestión de clientes y órdenes
+- arquitectura MVC
+
+## Próximos bloques previstos
+
+- API REST con autenticación (siguiente bloque).
+- Historial de cambios de órdenes.
+- Exportación CSV.
+- Deploy público de demostración.
+
+## Licencia
+
+MIT.
